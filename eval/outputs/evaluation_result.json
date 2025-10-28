@@ -71,16 +71,16 @@
     {
       "question_id": "7",
       "type": "numeric",
-      "mark_awarded": 0.5,
+      "mark_awarded": 0,
       "max_mark": 1,
-      "confidence": 0.5,
-      "explanation": "Gemini API fallback (error: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.)",
+      "confidence": 1.0,
+      "explanation": "The student's answer (7) does not match the correct answer (5).",
       "flags": [
         "partial_or_incorrect"
       ]
     }
   ],
-  "total_score": 0.5,
+  "total_score": 0.0,
   "total_max": 7.0,
-  "overall_confidence": 0.07
+  "overall_confidence": 0.0
 }

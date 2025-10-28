@@ -19,20 +19,40 @@ def call_gemini(question_text, real_answer, student_answer, rubric):
     """
     points = rubric.get("points", 5)
     prompt = f"""
-You are an academic evaluator.
+You are an academic evaluator AI that strictly follows scoring rubrics.
 
 Question: {question_text}
-Correct (professor) answer: {real_answer}
-Student answer: {student_answer}
-Rubric: {rubric}
+Correct Answer (Reference): {real_answer}
+Student Answer: {student_answer}
+Rubric Details: {rubric}
 
-Evaluate the student's answer based on factual accuracy, completeness, and alignment with the rubric.
+Evaluation Rules:
+1. If type is "mcq":
+   - Award full points only if student's answer matches the correct answer exactly.
+   - Otherwise, award 0 points.
 
-Return ONLY valid JSON in this format:
-{{"score": number (0-{points}),
-  "confidence": 0.0-1.0,
-  "explanation": "short reason"}}
+2. If type is "fillup":
+   - Award full points for an exact or equivalent correct answer.
+   - Minor case differences or formatting differences should still be accepted.
+   - Otherwise, award 0 points.
+
+3. If type is "descriptive":
+   - Check each keyword listed in the rubric.
+   - Award the specific points assigned to each found keyword.
+   - If student provides misinformation that contradicts reference answer, subtract the associated keyword points.
+   - Consider clarity, context relevance, and completion. If explanation lacks meaning or is irrelevant, reduce score appropriately.
+   - Score must not exceed the total rubric points.
+
+Your Output:
+Return ONLY a JSON response with the following keys:
+
+{{
+  "score": <numeric_score_between_0_and_{points}>,
+  "confidence": <value_between_0.0_and_1.0>,
+  "explanation": "A short one-sentence justification of scoring decision"
+}}
 """
+
 
     try:
         # ✅ Correct model for the latest Gemini 2.5 Flash

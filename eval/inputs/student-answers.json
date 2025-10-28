@@ -1,40 +1,20 @@
 {
-  "student_id": "123",
+  "student_id": "",
   "answers": [
     {
-      "question_id": "1",
-      "question_text": "Choose the correct subtraction sentence for the given picture.\n(a) 2 - 6 = 4\n(b) 4 - 6 = 2\n(c) 6 - 4 = 2",
-      "answer": "C"
+      "question_number": "Q.1",
+      "question_text": "What will counting upto twelve and keeping Still\nhelp us achieve?",
+      "answer_text": "It will help us to stop over activities afresh\nin a better and purposeful manner. The poet\nwants us to keep quiet and do self introspection\nthis will also help us to understand ourselves."
     },
     {
-      "question_id": "2",
-      "question_text": "Raj has 0 candles. Diya has 4 candles. How many candles do they have altogether?\n(a) 4\n(b) 0\n(c) 40",
-      "answer": "b"
+      "question_number": "Q.2",
+      "question_text": "Do you think the poet advocates total inactivity\nand death?",
+      "answer_text": "No, the poet does not advocate total inactivity\nand death. He only wants the destructive and\ninhuman activities to be Stopped."
     },
     {
-      "question_id": "3",
-      "question_text": "Choose the thing that will roll as well as slide.\n(a)\n(b)\n(c)",
-      "answer": "a"
-    },
-    {
-      "question_id": "4",
-      "question_text": "Choose the pair that has different shapes.\n(a)\n(b)\n(c)",
-      "answer": "C"
-    },
-    {
-      "question_id": "5",
-      "question_text": "Which two numbers will add up to 5?\n(a) 3,3\n(b) 4,1\n(c) 5,5",
-      "answer": "b"
-    },
-    {
-      "question_id": "6",
-      "question_text": "Choose the solid shape that can be seen in this hut.\n(a) cone\n(b) sphere\n(c) square",
-      "answer": "a"
-    },
-    {
-      "question_id": "7",
-      "question_text": "The number of jumps needed to reach 0 from 6 is",
-      "answer": "7"
+      "question_number": "Q.3",
+      "question_text": "What is the 'sadness' that the poet refers to\nin the poem?",
+      "answer_text": "The 'sadness' refers to the grief at never\nunderstanding ourselves. People remain\nbusy with their activities and thus never get\ntime to understand what they want in life.\nIf they stop all their activities for a moment\nand do quiet introspection, they will be able to\nremove their sadness."
     }
   ]
 }
