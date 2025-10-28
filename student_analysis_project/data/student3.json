@@ -1,0 +1,46 @@
+{
+  "exam_id": "CS_FINAL_03",
+  "student_id": "S789",
+  "evaluation": [
+    {
+      "question_id": "Q9",
+      "type": "descriptive",
+      "mark_awarded": 5,
+      "max_mark": 5,
+      "confidence": 0.95,
+      "explanation": "Detailed explanation of recursion vs. iteration, complete with examples.",
+      "flags": []
+    },
+    {
+      "question_id": "Q10",
+      "type": "descriptive",
+      "mark_awarded": 2,
+      "max_mark": 4,
+      "confidence": 0.70,
+      "explanation": "Only defined the O(N) complexity but failed to justify it with the provided algorithm. Partial credit awarded.",
+      "flags": ["partial_answer", "justification_missing"]
+    },
+    {
+      "question_id": "Q11",
+      "type": "descriptive",
+      "mark_awarded": 0,
+      "max_mark": 3,
+      "confidence": 0.30,
+      "explanation": "Answer was about Python lists instead of Java arrays.",
+      "flags": ["off_topic"]
+    },
+    {
+      "question_id": "Q12",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.97,
+      "explanation": "Matched with minor spelling tolerance. (Polymorphism)",
+      "flags": []
+    }
+  ],
+  "total_score": 8,
+  "total_max": 13,
+  "overall_confidence": 0.74,
+  "review_flags": ["high_partial_credit"]
+}
