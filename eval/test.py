@@ -1,6 +1,9 @@
 import os
-import google.generativeai as genai
+import re
+import json
+from pathlib import Path
 from PIL import Image
+import google.generativeai as genai
 
 # ✅ Configure Gemini API
 os.environ["GOOGLE_API_KEY"] = "AIzaSyB0kWddIA-t3ohBoQyj-NAPaHNuzF84a3E"
@@ -9,24 +12,53 @@ genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 # ✅ Load model
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-# ✅ Load handwritten answer image
-image_path = "/Users/bharani/Desktop/eval/test.jpg"   # <-- change this path
+# ✅ Input image path
+image_path = r"D:\Projects\Hackathon\ai_grader\eval\test.jpg"
 image = Image.open(image_path)
 
 # ✅ Extraction prompt
 extract_prompt = """
-Extract all readable text from this image in clear line-by-line format.
-Preserve the structure of questions and answers as accurately as possible.
-Do NOT summarize or skip any part.
+Extract all readable text from this image and organize it into JSON format:
+
+{
+  "student_id": "",
+  "answers": [
+    {
+      "question_number": "",
+      "question_text": "",
+      "answer_text": ""
+    }
+  ]
+}
+
+Rules:
+- Each question and answer must be separate.
+- Preserve text line-by-line.
+- Do NOT wrap or summarize.
+Return only JSON — no markdown, no explanations.
 """
 
 # ✅ Run Gemini extraction
-response_extract = model.generate_content([extract_prompt, image])
+response = model.generate_content([extract_prompt, image])
+raw_text = response.text.strip()
 
-# ✅ Save extracted text
-with open("extracted_text.txt", "w") as f:
-    f.write(response_extract.text)
+# ✅ Clean Markdown fences if present
+clean_text = re.sub(r"^```json\s*|\s*```$", "", raw_text.strip(), flags=re.MULTILINE).strip()
 
-print("\n--- ✅ Extracted Text ---\n")
-print(response_extract.text)
-print("\n(Text also saved as extracted_text.txt)")
+# ✅ Try to parse JSON safely
+try:
+    data = json.loads(clean_text)
+except json.JSONDecodeError:
+    print("⚠️ Gemini returned malformed JSON — saving raw output instead.")
+    data = {"raw_output": raw_text}
+
+# ✅ Save to inputs/student-answers.json
+output_dir = Path("inputs")
+output_dir.mkdir(exist_ok=True)
+output_path = output_dir / "student-answers.json"
+
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"\n✅ Clean JSON saved to {output_path}\n")
+print(json.dumps(data, indent=2, ensure_ascii=False))

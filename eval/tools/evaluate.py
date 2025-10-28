@@ -129,5 +129,5 @@ def evaluate(real_path, student_path, out_path):
 # ------------------------------------------------------------------
 if __name__ == "__main__":
     evaluate("inputs/real_answer_key.json",
-             "inputs/student_answers.json",
+             "inputs/student-answers.json",
              "outputs/evaluation_result.json")

@@ -1,36 +1,86 @@
 {
-  "exam_id": "EEE_UNIT_TEST_01",
-  "student_id": "S123",
+  "exam_id": "MATH_EV128_UNIT_TEST",
+  "student_id": "123",
   "evaluation": [
     {
-      "question_id": "Q1",
+      "question_id": "1",
       "type": "mcq",
-      "mark_awarded": 1,
+      "mark_awarded": 0.0,
       "max_mark": 1,
-      "confidence": 1.0,
-      "explanation": "Exact MCQ match",
-      "flags": []
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected B, got C",
+      "flags": [
+        "partial_or_incorrect"
+      ]
     },
     {
-      "question_id": "Q2",
-      "type": "fillup",
-      "mark_awarded": 1,
+      "question_id": "2",
+      "type": "mcq",
+      "mark_awarded": 0.0,
       "max_mark": 1,
-      "confidence": 1.0,
-      "explanation": "Exact text match",
-      "flags": []
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected A, got b",
+      "flags": [
+        "partial_or_incorrect"
+      ]
     },
     {
-      "question_id": "Q3",
-      "type": "descriptive",
-      "mark_awarded": 5,
-      "max_mark": 5,
-      "confidence": 0.9,
-      "explanation": "The student correctly identifies 'induction' as the mechanism, which in the context of a transformer, is synonymous with 'electromagnetic induction'. The professor's 'correct' answer also focuses solely on this core principle, implying its paramount importance. The student's answer additionally mentions 'between coils', further elaborating on the transfer of energy, even if not explicitly naming 'primary coil' and 'secondary coil', which the professor's answer also omits.",
-      "flags": []
+      "question_id": "3",
+      "type": "mcq",
+      "mark_awarded": 0.0,
+      "max_mark": 1,
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected C, got a",
+      "flags": [
+        "partial_or_incorrect"
+      ]
+    },
+    {
+      "question_id": "4",
+      "type": "mcq",
+      "mark_awarded": 0.0,
+      "max_mark": 1,
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected A, got C",
+      "flags": [
+        "partial_or_incorrect"
+      ]
+    },
+    {
+      "question_id": "5",
+      "type": "mcq",
+      "mark_awarded": 0.0,
+      "max_mark": 1,
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected C, got b",
+      "flags": [
+        "partial_or_incorrect"
+      ]
+    },
+    {
+      "question_id": "6",
+      "type": "mcq",
+      "mark_awarded": 0.0,
+      "max_mark": 1,
+      "confidence": 0.6,
+      "explanation": "MCQ mismatch: expected B, got a",
+      "flags": [
+        "partial_or_incorrect"
+      ]
+    },
+    {
+      "question_id": "7",
+      "type": "numeric",
+      "mark_awarded": 0.5,
+      "max_mark": 1,
+      "confidence": 0.5,
+      "explanation": "Gemini API fallback (error: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.)",
+      "flags": [
+        "partial_or_incorrect"
+      ]
     }
   ],
-  "total_score": 7.0,
+  "total_score": 0.5,
   "total_max": 7.0,
-  "overall_confidence": 1.0
+  "overall_confidence": 0.07
 }

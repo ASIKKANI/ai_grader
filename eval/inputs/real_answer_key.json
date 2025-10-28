@@ -1,8 +1,53 @@
 {
-  "exam_id": "EEE_UNIT_TEST_01",
+  "exam_id": "MATH_EV128_UNIT_TEST",
   "answer_key": [
-    {"question_id":"Q1","type":"mcq","correct_answer":"Ohm","options":["Ohm","Volt","Ampere"],"rubric":{"points":1}},
-    {"question_id":"Q2","type":"fillup","correct_answer":"cos(x)","rubric":{"points":1}},
-    {"question_id":"Q3","type":"descriptive","correct_answer":"A transformer works on electromagnetic induction.","rubric":{"points":5,"keywords":["electromagnetic induction","primary coil","secondary coil"]}}
+    {
+      "question_id": "1",
+      "type": "mcq",
+      "correct_answer": "B",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "2",
+      "type": "mcq",
+      "correct_answer": "A",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "3",
+      "type": "mcq",
+      "correct_answer": "C",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "4",
+      "type": "mcq",
+      "correct_answer": "A",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "5",
+      "type": "mcq",
+      "correct_answer": "C",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "6",
+      "type": "mcq",
+      "correct_answer": "B",
+      "options": ["A", "B", "C"],
+      "rubric": {"points": 1}
+    },
+    {
+      "question_id": "7",
+      "type": "numeric",
+      "correct_answer": "5",
+      "rubric": {"points": 1}
+    }
   ]
 }

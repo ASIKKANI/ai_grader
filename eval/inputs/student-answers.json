@@ -1,0 +1,40 @@
+{
+  "student_id": "123",
+  "answers": [
+    {
+      "question_id": "1",
+      "question_text": "Choose the correct subtraction sentence for the given picture.\n(a) 2 - 6 = 4\n(b) 4 - 6 = 2\n(c) 6 - 4 = 2",
+      "answer": "C"
+    },
+    {
+      "question_id": "2",
+      "question_text": "Raj has 0 candles. Diya has 4 candles. How many candles do they have altogether?\n(a) 4\n(b) 0\n(c) 40",
+      "answer": "b"
+    },
+    {
+      "question_id": "3",
+      "question_text": "Choose the thing that will roll as well as slide.\n(a)\n(b)\n(c)",
+      "answer": "a"
+    },
+    {
+      "question_id": "4",
+      "question_text": "Choose the pair that has different shapes.\n(a)\n(b)\n(c)",
+      "answer": "C"
+    },
+    {
+      "question_id": "5",
+      "question_text": "Which two numbers will add up to 5?\n(a) 3,3\n(b) 4,1\n(c) 5,5",
+      "answer": "b"
+    },
+    {
+      "question_id": "6",
+      "question_text": "Choose the solid shape that can be seen in this hut.\n(a) cone\n(b) sphere\n(c) square",
+      "answer": "a"
+    },
+    {
+      "question_id": "7",
+      "question_text": "The number of jumps needed to reach 0 from 6 is",
+      "answer": "7"
+    }
+  ]
+}
