@@ -1,0 +1,46 @@
+{
+  "exam_id": "PHY_MIDTERM_02",
+  "student_id": "S456",
+  "evaluation": [
+    {
+      "question_id": "Q5",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.98,
+      "explanation": "Matched ignoring case and brackets. (Kinetic Energy)",
+      "flags": []
+    },
+    {
+      "question_id": "Q6",
+      "type": "fillup",
+      "mark_awarded": 0,
+      "max_mark": 1,
+      "confidence": 0.45,
+      "explanation": "Significantly different answer provided. Expected 'Friction'.",
+      "flags": ["incorrect_answer"]
+    },
+    {
+      "question_id": "Q7",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.99,
+      "explanation": "Perfect match. (Quantum)",
+      "flags": []
+    },
+    {
+      "question_id": "Q8",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct option selected.",
+      "flags": []
+    }
+  ],
+  "total_score": 3,
+  "total_max": 4,
+  "overall_confidence": 0.85,
+  "review_flags": []
+}

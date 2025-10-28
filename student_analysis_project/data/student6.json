@@ -1,0 +1,46 @@
+{
+  "exam_id": "LIT_ESSAY_06",
+  "student_id": "S131",
+  "evaluation": [
+    {
+      "question_id": "Q21",
+      "type": "descriptive",
+      "mark_awarded": 8,
+      "max_mark": 10,
+      "confidence": 0.88,
+      "explanation": "Strong analysis of the main theme, but lacked depth in supporting textual evidence. Minor grammatical errors.",
+      "flags": ["partial_answer", "style_issue"]
+    },
+    {
+      "question_id": "Q22",
+      "type": "descriptive",
+      "mark_awarded": 10,
+      "max_mark": 10,
+      "confidence": 0.99,
+      "explanation": "Excellent, well-structured critical essay meeting all criteria.",
+      "flags": []
+    },
+    {
+      "question_id": "Q23",
+      "type": "descriptive",
+      "mark_awarded": 5,
+      "max_mark": 10,
+      "confidence": 0.55,
+      "explanation": "Misinterpreted the prompt and discussed the wrong novel/period. Only partial credit for general writing quality.",
+      "flags": ["off_topic", "low_confidence_score"]
+    },
+    {
+      "question_id": "Q24",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct option selected.",
+      "flags": []
+    }
+  ],
+  "total_score": 24,
+  "total_max": 31,
+  "overall_confidence": 0.80,
+  "review_flags": ["requires_manual_review"]
+}

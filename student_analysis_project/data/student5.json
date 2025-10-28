@@ -1,0 +1,46 @@
+{
+  "exam_id": "MATH_TEST_05",
+  "student_id": "S112",
+  "evaluation": [
+    {
+      "question_id": "Q17",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.99,
+      "explanation": "Perfect numerical match: '42'.",
+      "flags": []
+    },
+    {
+      "question_id": "Q18",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.95,
+      "explanation": "Matched with acceptable rounding: '3.14' (Expected '$pi$').",
+      "flags": []
+    },
+    {
+      "question_id": "Q19",
+      "type": "fillup",
+      "mark_awarded": 0,
+      "max_mark": 1,
+      "confidence": 0.1,
+      "explanation": "Completely incorrect value. Expected '2.718'.",
+      "flags": ["incorrect_answer"]
+    },
+    {
+      "question_id": "Q20",
+      "type": "descriptive",
+      "mark_awarded": 3,
+      "max_mark": 5,
+      "confidence": 0.65,
+      "explanation": "Correctly stated the theorem but failed to show a complete proof. Significant steps missing.",
+      "flags": ["partial_answer", "major_gap"]
+    }
+  ],
+  "total_score": 5,
+  "total_max": 8,
+  "overall_confidence": 0.77,
+  "review_flags": ["review_fillup_rounding"]
+}
