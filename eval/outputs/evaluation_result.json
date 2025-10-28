@@ -1,0 +1,36 @@
+{
+  "exam_id": "EEE_UNIT_TEST_01",
+  "student_id": "S123",
+  "evaluation": [
+    {
+      "question_id": "Q1",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Exact MCQ match",
+      "flags": []
+    },
+    {
+      "question_id": "Q2",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Exact text match",
+      "flags": []
+    },
+    {
+      "question_id": "Q3",
+      "type": "descriptive",
+      "mark_awarded": 5,
+      "max_mark": 5,
+      "confidence": 0.9,
+      "explanation": "The student correctly identifies 'induction' as the mechanism, which in the context of a transformer, is synonymous with 'electromagnetic induction'. The professor's 'correct' answer also focuses solely on this core principle, implying its paramount importance. The student's answer additionally mentions 'between coils', further elaborating on the transfer of energy, even if not explicitly naming 'primary coil' and 'secondary coil', which the professor's answer also omits.",
+      "flags": []
+    }
+  ],
+  "total_score": 7.0,
+  "total_max": 7.0,
+  "overall_confidence": 1.0
+}

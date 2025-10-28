@@ -1,0 +1,8 @@
+{
+  "exam_id": "EEE_UNIT_TEST_01",
+  "answer_key": [
+    {"question_id":"Q1","type":"mcq","correct_answer":"Ohm","options":["Ohm","Volt","Ampere"],"rubric":{"points":1}},
+    {"question_id":"Q2","type":"fillup","correct_answer":"cos(x)","rubric":{"points":1}},
+    {"question_id":"Q3","type":"descriptive","correct_answer":"A transformer works on electromagnetic induction.","rubric":{"points":5,"keywords":["electromagnetic induction","primary coil","secondary coil"]}}
+  ]
+}

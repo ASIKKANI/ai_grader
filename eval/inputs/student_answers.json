@@ -1,0 +1,10 @@
+{
+  "exam_id": "EEE_UNIT_TEST_01",
+  "student_id": "S123",
+  "student_name": "Priya Sharma",
+  "answers": [
+    {"question_id":"Q1","answer":"Ohm"},
+    {"question_id":"Q2","answer":"cos x"},
+    {"question_id":"Q3","answer":"It transfers energy between coils by induction."}
+  ]
+}
