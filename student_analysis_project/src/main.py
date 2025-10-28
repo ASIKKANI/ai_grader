@@ -10,7 +10,6 @@ from visualizer import (
     plot_class_averages,
     plot_question_analytics
 )
-from report_generator import generate_final_report
 
 
 def clean_charts_directory(charts_dir):
@@ -86,7 +85,6 @@ if __name__ == "__main__":
     plot_question_analytics(results["question_summary"], charts_dir)
 
     # 🖼️ Step 5: Generate final report image
-    generate_final_report(results, charts_dir, final_report_path)
 
     print(f"\n🖼️ Final report image generated at: {final_report_path}")
 

@@ -77,15 +77,13 @@ def plot_question_analytics(question_summary, save_path):
     Produces a table image question_analytics.png
     """
     # Build table rows
-    columns = ["Question ID", "Attempts", "Avg Score (%)", "Avg Confidence (%)", "Flags"]
+    columns = ["Question ID", "Attempts", "Avg Score (%)", "Avg Confidence (%)"]
     rows = []
     for qid, info in sorted(question_summary.items()):
         attempts = info.get("attempts", 0)
         avg_score_pct = info.get("avg_score", 0.0) * 100
         avg_conf_pct = info.get("avg_confidence", 0.0) * 100
-        flags_dict = info.get("flags_count", {})
-        flags_str = ", ".join(f"{k}:{v}" for k, v in flags_dict.items()) if flags_dict else ""
-        rows.append([qid, attempts, f"{avg_score_pct:.1f}", f"{avg_conf_pct:.1f}", flags_str])
+        rows.append([qid, attempts, f"{avg_score_pct:.1f}", f"{avg_conf_pct:.1f}"])
 
     # Determine figure size based on number of rows (so it remains readable)
     n_rows = max(1, len(rows))
@@ -106,3 +104,4 @@ def plot_question_analytics(question_summary, save_path):
     out_path = os.path.join(save_path, "question_analytics.png")
     plt.savefig(out_path, dpi=150)
     plt.close()
+
