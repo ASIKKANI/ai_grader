@@ -172,3 +172,7 @@ if __name__ == "__main__":
         print("\nPress any key on the image window to close it.")
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+        
+def align_image(input_path, output_path):
+    """Wrapper for compatibility with server.py"""
+    align_robust(input_path, output_path, debug=False)
