@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.log
+
+# FastAPI temp storage
+tmp/
+temp/
+*.sqlite3
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+
+# Live-server cache
+*.cache
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plagiarism Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 50px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0px 2px 20px rgba(0,0,0,0.10);
+        }
+
+        h2 {
+            color: #2643e9;
+            text-align: center;
+        }
+
+        button {
+            background: #2643e9;
+            color: #ffffff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 18px;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background: #1c31b5;
+        }
+
+        #file-list {
+            margin-top: 15px;
+            border: 1px solid #d6dbff;
+            border-radius: 6px;
+            padding: 14px;
+            background: #f7f9ff;
+        }
+
+        .file-item {
+            padding: 6px;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #d0d8ff;
+            margin-bottom: 6px;
+        }
+
+        .remove-btn {
+            background: red;
+            padding: 2px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 12px;
+            border: none;
+        }
+
+        #results {
+            margin-top: 25px;
+            background: #fbfcff;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #dfe6ff;
+            font-size: 14px;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>AI Plagiarism Detector 🧠📚</h2>
+
+    <input type="file" id="file-upload" multiple accept=".json" style="display:none" />
+
+    <button onclick="triggerUpload()">Add Files</button>
+    <button onclick="uploadFiles()">Run Analysis</button>
+
+    <div id="file-list"></div>
+
+    <div id="results"></div>
+</div>
+
+<script>
+    let selectedFiles = [];
+
+    function triggerUpload() {
+        document.getElementById("file-upload").click();
+    }
+
+    document.getElementById("file-upload").addEventListener("change", function(event) {
+        const newFiles = Array.from(event.target.files);
+        selectedFiles = [...selectedFiles, ...newFiles];
+        renderFileList();
+    });
+
+    function removeFile(index) {
+        selectedFiles.splice(index, 1);
+        renderFileList();
+    }
+
+    function renderFileList() {
+        const container = document.getElementById("file-list");
+        container.innerHTML = selectedFiles.map((file, idx) => `
+            <div class="file-item">
+                <span>${file.name}</span>
+                <button class="remove-btn" onclick="removeFile(${idx})">X</button>
+            </div>
+        `).join("");
+    }
+
+    async function uploadFiles() {
+        if (selectedFiles.length === 0) {
+            alert("Add at least one JSON file!");
+            return;
+        }
+
+        const formData = new FormData();
+        selectedFiles.forEach(file => formData.append("files", file));
+
+        document.getElementById("results").innerHTML = "Processing... Please wait... ⏳";
+
+        await fetch("http://localhost:8000/plagiarism/check", {
+            method: "POST",
+            body: formData
+        });
+
+        fetchResults();
+    }
+
+    async function fetchResults() {
+        const box = document.getElementById("results");
+        box.innerHTML = "Fetching results...";
+
+        const res = await fetch("http://localhost:8000/plagiarism/results");
+        const data = await res.json();
+
+        box.innerHTML =
+            `✅ Analysis Complete 🎯
+
+📌 Intra-Student Matches:
+${JSON.stringify(data.intra_student_results, null, 2)}
+
+📌 Cross-Student Similarities:
+${JSON.stringify(data.cross_student_results, null, 2)}
+`;
+    }
+</script>
+
+</body>
+</html>
