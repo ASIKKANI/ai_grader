@@ -3,7 +3,7 @@ import json
 from plagarism import PlagiarismDetector
 
 
-DATA_DIR = "modules/data"
+DATA_DIR = "inpputs"
 
 
 def load_all_student_answers(data_dir: str):
