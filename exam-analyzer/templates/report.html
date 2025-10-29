@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Analysis Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <div class="accent-bar"></div>
+      <h1>Exam Analysis Dashboard</h1>
+      <p>Insightful metrics from your uploaded exam data</p>
+    </header>
+
+    {% if result.error %}
+      <p class="error">{{ result.error }}</p>
+    {% else %}
+    <div class="grid-container">
+      <div class="chart-card">
+        <div class="chart-icon">📊</div>
+        <h2>Score Distribution</h2>
+        <img src="{{ url_for('static', filename=result.images.score_distribution) }}" alt="Score Distribution">
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-icon">🚩</div>
+        <h2>Flag Breakdown</h2>
+        <img src="{{ url_for('static', filename=result.images.flag_breakdown) }}" alt="Flag Breakdown">
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-icon">🧮</div>
+        <h2>Average Mark per Question</h2>
+        <img src="{{ url_for('static', filename=result.images.avg_mark) }}" alt="Average Mark">
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-icon">📈</div>
+        <h2>Average Confidence per Question</h2>
+        <img src="{{ url_for('static', filename=result.images.avg_confidence) }}" alt="Average Confidence">
+      </div>
+    </div>
+
+    <div class="download-container">
+      <a href="{{ url_for('static', filename=result.csv_path) }}" class="download-btn">
+        📄 Download Question Analysis CSV
+      </a>
+    </div>
+    {% endif %}
+
+    <footer>
+      <a href="/" class="back-link">⬅ Upload More JSON Files</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,46 @@
+{
+  "exam_id": "CHEM_QUIZ_04",
+  "student_id": "S101",
+  "evaluation": [
+    {
+      "question_id": "Q13",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct choice: 'C'.",
+      "flags": []
+    },
+    {
+      "question_id": "Q14",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct choice: 'B'.",
+      "flags": []
+    },
+    {
+      "question_id": "Q15",
+      "type": "mcq",
+      "mark_awarded": 0,
+      "max_mark": 1,
+      "confidence": 0.5,
+      "explanation": "Incorrect choice: 'D'. Expected 'A'.",
+      "flags": ["incorrect_answer"]
+    },
+    {
+      "question_id": "Q16",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.96,
+      "explanation": "Matched 'oxidation' ignoring plural form.",
+      "flags": []
+    }
+  ],
+  "total_score": 3,
+  "total_max": 4,
+  "overall_confidence": 0.86,
+  "review_flags": []
+}

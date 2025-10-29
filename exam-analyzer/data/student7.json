@@ -1,0 +1,46 @@
+{
+  "exam_id": "BIO_EXAM_07",
+  "student_id": "S142",
+  "evaluation": [
+    {
+      "question_id": "Q25",
+      "type": "mcq",
+      "mark_awarded": 0,
+      "max_mark": 1,
+      "confidence": 0.5,
+      "explanation": "Incorrect option selected. (Mitosis)",
+      "flags": ["incorrect_answer"]
+    },
+    {
+      "question_id": "Q26",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct choice: 'A'.",
+      "flags": []
+    },
+    {
+      "question_id": "Q27",
+      "type": "mcq",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 1.0,
+      "explanation": "Correct choice: 'D'.",
+      "flags": []
+    },
+    {
+      "question_id": "Q28",
+      "type": "fillup",
+      "mark_awarded": 1,
+      "max_mark": 1,
+      "confidence": 0.98,
+      "explanation": "Matched 'photosynthesis'.",
+      "flags": []
+    }
+  ],
+  "total_score": 3,
+  "total_max": 4,
+  "overall_confidence": 0.87,
+  "review_flags": []
+}

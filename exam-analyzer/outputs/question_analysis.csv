@@ -1,0 +1,33 @@
+exam_id,student_id,question_id,type,mark_awarded,max_mark,confidence,flags,percentage
+EEE_UNIT_TEST_01,S123,Q1,mcq,1,1,1.0,none,100.0
+EEE_UNIT_TEST_01,S123,Q2,mcq,0,1,0.5,incorrect_answer,0.0
+EEE_UNIT_TEST_01,S123,Q3,mcq,1,1,1.0,none,100.0
+EEE_UNIT_TEST_01,S123,Q4,descriptive,4,5,0.82,partial_answer,80.0
+PHY_MIDTERM_02,S456,Q5,fillup,1,1,0.98,none,100.0
+PHY_MIDTERM_02,S456,Q6,fillup,0,1,0.45,incorrect_answer,0.0
+PHY_MIDTERM_02,S456,Q7,fillup,1,1,0.99,none,100.0
+PHY_MIDTERM_02,S456,Q8,mcq,1,1,1.0,none,100.0
+CS_FINAL_03,S789,Q9,descriptive,5,5,0.95,none,100.0
+CS_FINAL_03,S789,Q10,descriptive,2,4,0.7,"partial_answer, justification_missing",50.0
+CS_FINAL_03,S789,Q11,descriptive,0,3,0.3,off_topic,0.0
+CS_FINAL_03,S789,Q12,fillup,1,1,0.97,none,100.0
+CHEM_QUIZ_04,S101,Q13,mcq,1,1,1.0,none,100.0
+CHEM_QUIZ_04,S101,Q14,mcq,1,1,1.0,none,100.0
+CHEM_QUIZ_04,S101,Q15,mcq,0,1,0.5,incorrect_answer,0.0
+CHEM_QUIZ_04,S101,Q16,fillup,1,1,0.96,none,100.0
+MATH_TEST_05,S112,Q17,fillup,1,1,0.99,none,100.0
+MATH_TEST_05,S112,Q18,fillup,1,1,0.95,none,100.0
+MATH_TEST_05,S112,Q19,fillup,0,1,0.1,incorrect_answer,0.0
+MATH_TEST_05,S112,Q20,descriptive,3,5,0.65,"partial_answer, major_gap",60.0
+LIT_ESSAY_06,S131,Q21,descriptive,8,10,0.88,"partial_answer, style_issue",80.0
+LIT_ESSAY_06,S131,Q22,descriptive,10,10,0.99,none,100.0
+LIT_ESSAY_06,S131,Q23,descriptive,5,10,0.55,"off_topic, low_confidence_score",50.0
+LIT_ESSAY_06,S131,Q24,mcq,1,1,1.0,none,100.0
+BIO_EXAM_07,S142,Q25,mcq,0,1,0.5,incorrect_answer,0.0
+BIO_EXAM_07,S142,Q26,mcq,1,1,1.0,none,100.0
+BIO_EXAM_07,S142,Q27,mcq,1,1,1.0,none,100.0
+BIO_EXAM_07,S142,Q28,fillup,1,1,0.98,none,100.0
+HIST_UNIT_08,S153,Q29,fillup,1,1,0.99,none,100.0
+HIST_UNIT_08,S153,Q30,fillup,0,1,0.6,minor_error,0.0
+HIST_UNIT_08,S153,Q31,fillup,1,1,0.97,none,100.0
+HIST_UNIT_08,S153,Q32,descriptive,4,5,0.85,partial_answer,80.0
